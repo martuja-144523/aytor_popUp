@@ -1,0 +1,38 @@
+#sp_banner .ban_back{
+    height: 400px;
+    background: #11161e;
+}
+#sp_banner .ban_text{
+    color: #E5E5E5;
+    text-align: center;
+}
+
+/* ab_best style starts here   */
+.ab_best .re_pro_slide_items .recent_off{
+    background: red;
+    display: inline-block;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 0;
+    position: absolute;
+    transform: rotate(0);
+    top: 0;
+    /* z-index: 33; */
+}
+.ab_best .re_pro_slide_items .recent_info{
+    text-align: left;
+}
+.ab_best .re_pro_slide_items .recent_info h4{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.ab_best .re_pro_slide_items .recent_info .rec_info_div i{
+    font-size: 10px;
+}
+.ab_best .re_pro_slide_items{
+    transition: .5s;
+}
+.ab_best .re_pro_slide_items:hover{
+    transform: scale(1.08);
+}

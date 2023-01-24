@@ -1,0 +1,697 @@
+/*
+Template Name: Aytor
+Version: 1.0.0
+Author: Aytor
+
+
+Table of Content
+===========================
+   ********Home Page*********
+   1) Nav Section     (id="mynav")
+   2) Banner Section  (id="banner)
+   3) Product Section (id="product")
+   4) Slide product   (id="slide_product")
+   5) Offer           (id="offer")
+   6) Best            (id="best")
+   7) Deals           (id="deals")
+    a)Timer           (id="timer")
+   8) Video           (id="video") 
+   9) News            (id="news")
+  10) Promo           (id="promo")
+  11) Footer          (id="footer")
+  12) Back to top     (id="backToTop")
+
+  ********About Page*********
+  1) Header 
+
+*/
+
+/* Common Css Start */
+h1,h2,h3,h4,h5,h6,
+p,
+small,span,
+ol,ul{
+   margin: 0;
+   padding: 0;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+ }
+ul,ol{
+   list-style-type: none;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.ancor_design{
+    
+    line-height: 30px;
+    font-weight: 600;
+    color: #E5E5E5;
+    padding: 26px 44px;
+    background: #FF6F61;
+    transition: .5s;
+    font-size: 18px;
+    
+}
+
+.prag{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.head_2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+.head_3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#sec_padding{
+    padding: 90px 0;
+}
+/* //Common Css End */
+
+/* preloder style starts here  */
+#loder{
+    width: 100%;
+    height: 100vh;
+    background: #E5E5E5 url(../image/proloder.png!bw700) no-repeat center;
+    position: fixed;
+    z-index: 999999999999999999999999999999;
+    
+}
+/* Nav css Start */
+#mynav.fixd{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#mynav .mymenue ul li > a{
+    padding: 35px 15px;
+}
+#mynav .mymenue ul li:hover > a{
+    color: red;
+}
+#mynav .mymenue .menue_icon i{
+    padding: 40px 14px;
+    position: relative;
+    cursor: pointer;
+}
+#mynav .mymenue .menue_icon i:hover{
+    color: red;
+}
+#mynav .mymenue .menue_icon i span{
+    position: absolute;
+    background: red;
+    border: 2px solid red;
+    color: #E5E5E5;
+    border-radius: 50%;
+    font-size: 8px;
+    left: 50%;
+    top: 38%;
+
+}
+#mynav .mymenue .menue_icon i span:hover{
+    background: #E5E5E5;
+    color: red;
+}
+
+
+/* //Nav css End */
+
+/* banner style  starts  */
+
+
+#banner .slide .slide_item{ 
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+#banner .slide .slide_item::after{
+    content: '';
+    background-image: linear-gradient(to right,rgba(2, 5, 19, 0.7),
+    rgba(2, 4, 17, 0.6175),
+    rgba(1, 4, 15, 0.5484),
+    rgba(1, 3, 13, 0.4834),
+    rgba(0, 0, 0, 0));
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+#banner .slide .slide_item .ban_tx h4{
+    font-size: 18px ;
+    line-height: 28px ;
+    color: #E5E5E5;
+}
+#banner .slide .slide_item .ban_tx h1{
+    font-size: 64px ;
+    line-height: 74px ;
+    font-weight: 700;
+    color: #E5E5E5;
+}
+#banner .slide .slide_item .ban_tx p{
+    font-family: roboto ,sans-serif;
+    font-size: 16px ;
+    line-height: 28px ;
+    font-weight: 400;
+    color: #E5E5E5;
+}
+#banner .slide .slide_item .ban_tx div{
+    padding: 57px 0;
+}
+#banner .slide .slide_item .ban_tx a{
+    font-size: 18px ;
+    line-height: 30px ;
+    font-weight:600;
+    color: #E5E5E5;
+    padding: 26px 44px;
+    background: #FF6F61;
+}
+ .ban_dots{
+    position: absolute;
+    bottom: 200px;
+    left: 6%;
+    
+}
+ .ban_dots li{
+    line-height: 0;
+    display: inline-block;
+}
+ .ban_dots li.slick-active button{
+    width: 26px;
+    background: #FF6F61
+} 
+ .ban_dots li button{
+    background: #E5E5E5;
+    height: 6px;
+    width: 10px;
+    border-radius:5px ;
+    box-shadow: none;
+    font-size: 0;
+    border: none;
+    margin-right: 5px;
+    /* display: block; */
+}
+
+
+/* banner style ends */
+
+/* product style stsrts  */
+#product{
+    padding: 90px 0;
+}
+#product .product_div-1{
+    padding-bottom: 12px;
+}
+#product .product_div{
+    position: relative;
+}
+#product .product_div .pro_overly{
+    background: rgba(17, 22, 30, .25);
+    position: absolute;
+    inset: 33px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+#product .product_div:hover .pro_overly{
+    visibility: visible;
+    opacity: 1;
+}
+#product .product_div-2{
+    padding-top: 12px;
+}
+/* #product .pro_img{
+    width: 100%;
+} */
+/* product style ends here  */
+ 
+/* recent product style starts here  */
+#slide_product{
+    padding: 90px 0;
+}
+ .re_pro_slide_items{
+    padding: 0 12px;
+    position: relative;
+}
+/* #slide_product .re_pro_slide_items:nth-child(1n){
+    padding: 0;
+} */
+ .re_pro_slide_items .recent_info{
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* #slide_product .re_pro_slide_items .recent_info .pro_icon_overl ul{
+    
+} */
+.re_pro_slide_items .recent_info .pro_icon_overly{
+    top: 45px;
+    right: 31px;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: right;
+    transition: .5s;
+}
+
+.re_pro_slide_items:hover .pro_icon_overly{
+    transform: scale(1);
+    /* opacity: 1;
+    visibility: visible;  */
+    /* display: block; */
+}
+.re_pro_slide_items .recent_info .pro_icon_overly ul li{
+    padding-bottom: 10px;}
+.re_pro_slide_items .recent_info .pro_icon_overly ul li i{
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    transition: .7s;
+}
+.re_pro_slide_items .recent_info .pro_icon_overly ul li i:hover {
+    color: #E5E5E5;
+    background: #FF6F61;
+}
+#slide_product .recent_slider_icon{
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    background: rgb(46, 43, 43 , .7) ;
+    color: #E5E5E5;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+#slide_product .slide_icon_left{
+    left: 12px;
+}
+#slide_product .slide_icon_right{
+    right: 12px;
+}
+.re_pro_slide_items .recent_off{
+    background: red;
+    display: inline-block;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 16px 0 0 16px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 14px;
+}
+/* recent product ends here  */
+/* offer ban style starts here  */
+#offer{
+    background: url(../image/offer_banner_2_1.jpg);
+    color: #E5E5E5;
+    position: relative;
+}
+
+#offer .offer_ban::before{
+    content: '' ;
+    position: absolute;
+    background-color: rgba(73, 12, 12, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 51%;
+    transform: skew(45deg);
+    opacity: 1;
+    /* z-index: 4; */
+}
+#offer:hover .offer_ban::before{
+    right: 10%;
+    left: 10%;
+    opacity: 0;
+}
+#offer .offer_ban h2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+#offer .offer_ban p{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 36px 0;
+}
+#offer .offer_ban a{
+    padding: 20px 30px;
+    border: 1px solid #E5E5E5;
+    transition: .5s;
+    color: #E5E5E5;
+}
+#offer .offer_ban a:hover{
+    background: #FF6F61;
+    border: 1px solid #FF6F61;
+}
+#offer .offer_ban_pad{
+    padding: 100px 0;
+}
+
+/* offer style ends here  */
+
+/* best sell style starts here  */
+#best{
+    padding: 90px 0;
+}
+/* best sell style ends here  */
+
+/* timer style starts here  */
+
+#deals .head_deals h4{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    padding-bottom: 70px;
+}
+#deals{
+    position: relative;
+    padding: 90px 0;
+}
+#timer .count_down {
+	/* position: absolute; */
+	/* top: 160px; */
+	/* left: 50%; */
+	transform: translate(-50%);
+	align-items: center;
+	padding: 15px 80px;
+	box-shadow: 0 0 10px 0 rgba(21, 26, 50, 0.1);
+	border-radius: 40px;
+	z-index: 99;
+	margin: 0 0px -44px 417px;
+	background: white;
+}
+#timer .count_down_child span{
+   display: block;
+   text-align: center;
+   
+}
+#timer .count_down_child .up{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+#timer .count_down_child .down{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+#timer .count_down .outer_span{
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #FF6F61;
+}
+
+/* deals style starts here  */
+#deals .deals_slide{
+    box-shadow: 0 0 70px 0 rgba(21, 26, 50, 0.08);
+}
+#deals .deals_info{
+    padding: 42px;
+}
+#deals .deals_slide .parents_deals{
+    padding: 75px 12px;
+}
+#deals .deals_info h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+
+}
+
+#deals .deals_info h2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    
+}
+#deals .deals_info p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    
+}
+#deals .deals_info .doaller{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 30px 0;
+}
+#deals .deals_info .doaller span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 30px 0;
+    text-decoration: line-through;
+    color: gray;
+}
+#deals .ban_dots{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+/* video  */
+#video{
+    padding: 90px 0;
+}
+#video .video_img{
+    position: relative;
+}
+#video .video_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 18px;
+}
+
+#video .my_video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+#video .my_video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% ,-25%);
+}
+#video .my_video i{
+    font-size: 25px;
+    color: #FF6F61;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #E5E5E5;
+    border-radius: 50%;
+}
+#video .my_video .video_icon{
+}
+#video .prag{
+    padding: 30px 0;
+}
+/* video enfs here  */
+
+/* news starts here */
+#news{
+    padding: 90px 0;
+}
+#news .ban_dots{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+}
+#news .news_slide_info{
+    padding: 20px 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 12px;
+}
+#news .news_info h3{
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 7px;
+    transition: .5s;
+
+}
+/* news style endes here  */
+
+/* promotion style starts here  */
+#promo .drop_shadow{
+    box-shadow: 4px 0 24px 0 rgba(0, 0, 0, 0.25);
+    padding: 38px 45px;
+}
+#promo .promo_child{
+    border-right: 2px solid rgba(241, 241, 241, 1);
+}
+#promo .promo_child:last-child{
+    border: none;
+}
+#promo .promo_icon{
+    height: 70px;
+    width: 70px;
+    background: #FF6F61;
+    border-radius: 50%;
+    color: #E5E5E5;
+    font-size: 28px;
+    text-align: center;
+    line-height: 70px;
+}
+#promo .promo_info{
+    padding-left: 10px;
+}
+#promo .promo_info h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+#promo .promo_info p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+}
+/* promotion style endes here  */
+
+/* footer style starts here  */
+.address .add_icon,
+.address .add_info{
+    display: inline;
+}
+.address .add_icon{
+    padding:10px 15px 0 0 ;
+}
+.letter form input{
+    width: 200px;
+    height: 50px;
+}
+.letter form{
+    position: relative;
+}
+.letter form button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    background: #FF6F61;
+    border: none;
+}
+#footer{
+    background: rgba(17, 22, 30, 1);
+}
+#footer .fot_head{
+    padding-bottom: 66px;
+    border-bottom: 2px solid #E5E5E5;
+}
+#footer .fot_head .head_child .footIcon  a i{
+    background: #E5E5E5;
+    color: black;
+    font-size: 18px;
+    padding: 8px;
+    transition: .7s;
+}
+#footer .fot_head .head_child .footIcon  a i:hover{
+    background: #FF6F61;
+    color: #E5E5E5;
+}
+#footer .fot_footer{
+    padding: 70px 0;
+}
+#footer .fot_footer h4{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #E5E5E5;
+}
+#footer .fot_footer ul li a,
+#footer .fot_footer ul li span{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #E5E5E5;
+    transition: .5s;
+}
+#footer .fot_footer ul li a:hover,
+#footer .fot_footer ul li span:hover{
+    color: #FF6F61;
+}
+#footer .fot_footer .date p{
+    color: #E5E5E5;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#footer .fot_footer .address .add{
+    color: #E5E5E5;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#footer .fot_footer .address ul li i{
+    color: #FF6F61;
+}
+#footer .fot_footer .letter p{
+    color: #E5E5E5;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#footer footer{
+    background: rgba(0, 0, 0, 0.25);
+}
+#footer footer p{
+    text-align: center;
+    color: #E5E5E5;
+    padding: 30px 0;
+}
+#footer footer p span{
+    color: #FF6F61;
+}
+/* #footer .fot_footer .letter input{
+    position: relative;
+}
+#footer .fot_footer .letter .bnt button{
+    position: absolute;
+} */
+
+/* footer style starts here  */
+
+/* backToTop style starts here  */
+#backToTop button.backTop{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background: #FF6F61;
+    border: 1px solid #E5E5E5;
+    color: #E5E5E5;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+}
+/* backToTop style ends here  */
+
+
+

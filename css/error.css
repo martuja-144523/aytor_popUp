@@ -1,0 +1,100 @@
+#er_ban .er_ban_dive{
+    width: 100%;
+    height: 769px;
+    background: url(../image/404.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+}
+#er_ban .er_ban_dive .er_info h4{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    
+}
+#er_ban .er_ban_dive .er_info .prag{
+    padding-bottom: 45px;
+}
+#er_ban .er_ban_dive .er_info a{
+    padding: 23px;
+    background: #FF6F61;
+    color: #E5E5E5;
+    transition: .5s;
+}
+#er_ban .er_ban_dive .er_info a:hover{
+    padding: 25px;
+    background:#E5E5E5;
+    color: black;
+}
+#er_ban .er_ban_dive .er_info{
+    padding-bottom: 100px;
+}
+#popUp{
+    position: relative;
+}
+#poUp .pop_up{
+    position: fixed;
+    height: 500px;
+    width: 900px;
+    background: url(../image/BG.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    top: 17% ;
+    left:  50%;
+    transform: translate(-50%);
+    z-index: 9999;
+}
+#poUp .pop_up img{
+    object-position: bottom;
+    object-fit: contain;
+    height: 100%;
+}
+#poUp .pop_up .cross{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #E5E5E5;
+    background: #FF6F61;
+    border: none;
+}
+#poUp .pop_up_info div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#poUp .pop_info h4{
+    font-weight: 500;
+    color: #E5E5E5;
+    font-size: 48px;
+    margin: 30px 0;
+    display: inline-block;
+    text-decoration: underline;
+    /* border-bottom: 4px solid; */
+}
+#poUp .pop_info p{
+    margin-bottom: 30px;
+}
+#poUp .pop_info .subscribe_input{
+    height: 50px;
+    width: 500px;
+}
+#poUp .pop_info a {
+    color: #E5E5E5;
+}
+#poUp .pop_info .subs_btn{
+    height: 50px;
+    width: 100px;
+    background: black;
+    transition: .7s;
+    border: none;
+}
+#poUp .pop_info .subs_btn:hover{
+    height: 50px;
+    width: 100px;
+    background: #FF6F61;
+    /* color: #E5E5E5; */
+
+}
